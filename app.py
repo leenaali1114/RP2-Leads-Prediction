@@ -26,6 +26,14 @@ def get_value(val,my_dict):
 def main():
     app_mode = st.sidebar.selectbox('Select Page',['Visualization','Prediction']) #two pages
     if app_mode=='Visualization': 
+        st.sidebar.subheader('Leads Conversion Statistics')
+        st.sidebar.markdown("KPI's: ")
+        st.sidebar.markdown("- **Conversion Statistics**")
+        st.sidebar.markdown("- **Gender** wise conversions")
+        st.sidebar.markdown("- **Stream** wise conversions")
+        st.sidebar.markdown("- **State/City** wise conversions")
+        st.sidebar.markdown("- **Course** wise conversions")
+        st.sidebar.markdown("- **Detailed Report**")
         
         col1, col2, col3 = st.columns(3)
         with col1:
@@ -36,10 +44,10 @@ def main():
             st.write(' ')
         
         st.markdown("<h1 style='text-align: center; color: black;'>Leads Data Viz.</h1>", unsafe_allow_html=True)
-        st.markdown('Dataset :')    
-        data=pd.read_csv('Leads_data_Uncleaned.csv')    
+        # st.markdown('Dataset :')    
+        # data=pd.read_csv('Leads_data_Uncleaned.csv')    
         df = pd.read_csv('Leads_data.csv')
-        st.write(data.head())
+        # st.write(data.head())
         # col1, col2 = st.columns(2)  
         # with col1:     
         #     st.markdown('Course vs Conversion Status ') 
