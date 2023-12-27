@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle  
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
 st.set_page_config(layout='wide')
 
@@ -111,10 +111,19 @@ def main():
             st.subheader("Gender & Education Details")
             gender = st.selectbox('Select Gender', ["Male", "Female"])
             college = st.selectbox('Select College type', ["Engineering", "Arts & Science, Commerce"])
-            course = st.selectbox('Select Course', ['Btech-IT', 'BCA', 'BSc-IT', 'Others', 'MCA', 'MSc-IT', 'Mtech-IT',
-            'Diploma-IT', 'BVoc', 'Btech-Non IT', 'BSc-Non IT', 'BCom',
-            'OTHERS', 'BA', 'Diploma-Non IT', 'MBA', 'Bvoc', 'MSc-Non IT',
+            if college == "Engineering":
+                course = st.selectbox('Select Course', ['Btech-IT',  'Mtech-IT','Btech-Non IT', 'Mtech-NonIT', 'Other'])
+                if course=='Others':
+                   course = st.text_input('Enter your Course') 
+            else:
+                course = st.selectbox('Select Course', [ 'BCA', 'BSc-IT', 'Others', 'MCA', 'MSc-IT', 
+            'Diploma-IT', 'BVoc',  'BSc-Non IT', 'BCom',
+             'BA', 'Diploma-Non IT', 'MBA', 'Bvoc', 'MSc-Non IT',
             'MCom'])
+                if course=='Others':
+                   course = st.text_input('Enter your Course')
+
+            
 
         with col2:
             st.subheader("Demographic Details")
