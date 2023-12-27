@@ -100,7 +100,7 @@ def main():
                                     vizElement.parentNode.insertBefore(scriptElement, vizElement);                
                         </script>"""
         
-        components.html(html_temp, width=1130, height=900)
+        components.html(html_temp, width=1200, height=900)
             
     elif app_mode == 'Prediction':
         st.sidebar.subheader('Rounded Professional Program')
