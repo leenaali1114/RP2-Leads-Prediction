@@ -93,11 +93,11 @@ def main():
     elif app_mode == 'Prediction':
         st.sidebar.subheader('Rounded Professional Program')
         st.sidebar.markdown("This is a demo web app for predicting the conversion status of a lead given the following details:")
-        st.sidebar.markdown("- Gender [Male, Female]")
-        st.sidebar.markdown("- College Type [Engineering, Arts & Science,Commerce]")
-        st.sidebar.markdown("- Course [Various IT & Non-IT courses]")
-        st.sidebar.markdown("- State [Kerala, Outside Kerala]")
-        st.sidebar.markdown("- City [Cities in India]")
+        st.sidebar.markdown("- **Gender** [Male, Female]")
+        st.sidebar.markdown("- **College** Type [Engineering, Arts & Science,Commerce]")
+        st.sidebar.markdown("- **Course** [Various IT & Non-IT courses]")
+        st.sidebar.markdown("- **State** [Kerala, Outside Kerala]")
+        st.sidebar.markdown("- **City** [Cities in India]")
                         
                             
                         
